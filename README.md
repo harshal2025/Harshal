@@ -1,2 +1,0 @@
-# Harshal
-portfolio website
