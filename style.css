@@ -1,0 +1,157 @@
+style.css
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #f1f1f1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Header */
+.main-header {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.main-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    color: #00ffe0;
+    text-shadow: 0px 0px 15px #00ffe0;
+    animation: glow 2s infinite alternate;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+/* Sections */
+section {
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Effects */
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.neon {
+    background: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8);
+    background-size: 600% 600%;
+    animation: neonMove 8s ease infinite;
+}
+
+.colorful {
+    background: linear-gradient(45deg, #00c3ff, #ffff1c, #ff0099);
+    background-size: 400% 400%;
+    animation: colorfulMove 10s ease infinite;
+}
+
+/* Titles */
+h2 {
+    font-size: 2.2rem;
+    color: #fffa;
+    margin-bottom: 15px;
+    border-left: 5px solid #00ffe0;
+    padding-left: 10px;
+    animation: fadeInLeft 1s ease;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Connect Section */
+.connect .social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.connect a img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.3);
+}
+
+.connect a img:hover {
+    transform: translateY(-8px) scale(1.1) rotate(5deg);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Animations */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0, 0 0 30px #00ffe0;
+    }
+    to {
+        text-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea, 0 0 60px #00ffea;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes neonMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+@keyframes colorfulMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .connect .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
